@@ -1,7 +1,7 @@
-This Java project is to learn algorithm.
+The purpose of this Java project is to learn algorithm.
 
 I will use the book "Algorithms 4th Edition" and "Cracking The Coding Interview"
 
 Hope I can learn more about algorithms implementation and find a good job :)
 
-P.S. I want to write the Java code in Vim, not Eclipse. Well, that's why I am using maven to create the project. It helps me digging deeper in the Java projects' structure. Actually, it is pretty cool, I mean writing Java code in Vim instead of any smart IDEs!
+P.S. I want to write the Java code in Vim, not Eclipse. Well, that's why I am using maven to create this project. It helps me digging deeper in the Java projects' structure. Actually, it is pretty cool, I mean writing Java code in Vim instead of any smart IDEs!
