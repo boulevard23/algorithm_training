@@ -1,5 +1,8 @@
 package cse.buffalo.edu.algorithms.stackandqueue;
 
+import cse.buffalo.edu.algorithms.stdlib.StdIn;
+import cse.buffalo.edu.algorithms.stdlib.StdOut;
+
 public class FixedCapacityStack<Item> {
   private Item[] a;
   private int N;
@@ -22,5 +25,21 @@ public class FixedCapacityStack<Item> {
 
   public Item pop() {
     return a[--N];
+  }
+
+  public static void main(String[] args) {
+    FixedCapacityStack<String> s;
+    s = new FixedCapacityStack<String>(100);
+
+    while(!StdIn.isEmpty()) {
+      String item = StdIn.readString();
+      if (!item.equals("-")) {
+        s.push(item);
+      } else if (!s.isEmpty()) {
+        StdOut.print(s.pop() +  " ");
+      }
+    }
+
+    StdOut.println("(" + s.size() + " left on stack)");
   }
 }
