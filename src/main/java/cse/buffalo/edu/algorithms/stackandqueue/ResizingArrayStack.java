@@ -1,11 +1,22 @@
 package cse.buffalo.edu.algorithms.stackandqueue;
 
+import cse.buffalo.edu.algorithms.stdlib.StdIn;
+import cse.buffalo.edu.algorithms.stdlib.StdOut;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class ResizingArrayStack<Item> implements Iterable<Item> {
 
   private Item[] a = (Item[]) new Object[1];
   private int N = 0;                             // Number of items
+
+  public boolean isEmpty() {
+    return N == 0;
+  }
+
+  public int size() {
+    return N;
+  }
 
   private void resize(int max) {
     // Move stack to a new array of size max.
@@ -24,6 +35,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
 
   public Item pop() {
     // Remove item from top of stack
+    if (isEmpty()) throw new NoSuchElementException();
     Item item = a[--N];
     a[N] = null;                                  // Avoid loitering
     if (N > 0 && N == a.length/4) resize(a.length/2);
@@ -43,11 +55,25 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     }
 
     public Item next() {
+      if (!hasNext()) throw new NoSuchElementException();
       return a[--i];
     }
 
     public void remove() {
       // Pass
     }
+  }
+
+  public static void main(String[] args) {
+    ResizingArrayStack<String> s = new ResizingArrayStack<String>();
+    while (!StdIn.isEmpty()) {
+      String item = StdIn.readString();
+      if (!item.equals("-")) {
+        s.push(item);
+      } else if (!s.isEmpty()) {
+        StdOut.print(s.pop() + " ");
+      }
+    }
+    StdOut.println("(" + s.size() + " left on stack)");
   }
 }

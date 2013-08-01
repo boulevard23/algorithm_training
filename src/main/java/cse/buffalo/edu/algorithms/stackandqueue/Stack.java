@@ -3,6 +3,7 @@ package cse.buffalo.edu.algorithms.stackandqueue;
 import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Stack<Item> implements Iterable<Item> {
 
@@ -38,6 +39,7 @@ public class Stack<Item> implements Iterable<Item> {
 
   public Item pop() {
     // Remove item from top of stack
+    if (isEmpty()) throw new NoSuchElementException("Stack underflow");
     Item item = first.item;
     first = first.next;
     N--;
@@ -56,6 +58,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     public Item next() {
+      if (!hasNext()) throw new NoSuchElementException();
       Item item = head.item;
       head = head.next;
       return item;
