@@ -1,6 +1,6 @@
 package cse.buffalo.edu.algorithms.datastructure;
 
-import cse.buffalo.edu.algorithms.stackandqueue.Stack;
+import cse.buffalo.edu.algorithms.datastructure.stack.Stack;
 import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 
