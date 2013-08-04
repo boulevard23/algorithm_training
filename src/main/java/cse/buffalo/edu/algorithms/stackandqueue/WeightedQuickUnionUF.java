@@ -4,28 +4,29 @@ import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 
 /**
- * Union-Find by using quick union method
+ * Union-Find by using weighted quick union method
  *
  * Data files: tinyUF.txt, mediumUF.txt, largeUF.txt
  *
- * The union() operation now is quick, however, there
- * are several drawbacks: Trees can get tall. And find()
- * operation now is too expensive (could be N array
- * accesses).
- *
+ * Improving the union() operation so that the tree
+ * will be more balance now.
  */
 
-public class QuickUnionUF {
+public class WeightedQuickUnionUF {
 
   private int[] id;    // Access to component id
+  private int[] sz;    // Store tree size
   private int count;   // Number of components
 
-  public QuickUnionUF(int N) {
+  public WeightedQuickUnionUF(int N) {
     // Initialize component id array
+    // Initialize tree size sz array
     count = N;
     id = new int[N];
+    sz = new int[N];
     for (int i = 0; i < N; i++) {
       id[i] = i;
+      sz[i] = 1;
     }
   }
 
@@ -52,9 +53,14 @@ public class QuickUnionUF {
     // p and q are already in the same component.
     if (i == j) return;
 
-    // Always set p's root to q's root
-    // We can do some imporvements here actually.
-    id[i] = j;
+    // The one with more children will be the new root.
+    if (sz[i] < sz[j]) {
+      id[i] = j;
+      sz[j] += sz[i];
+    } else {
+      id[j] = i;
+      sz[i] += sz[j];
+    }
     count--;
   }
 
