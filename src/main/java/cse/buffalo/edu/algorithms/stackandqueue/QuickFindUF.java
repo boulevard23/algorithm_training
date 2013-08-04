@@ -8,9 +8,12 @@ import cse.buffalo.edu.algorithms.stdlib.StdOut;
  *
  * Data files: tinyUF.txt, mediumUF.txt, largeUF.txt
  *
- * Quick find is very slow when for large input, because
- * union() needs to scan through the whole id[] array
- * for each input pair.
+ * The find() operation for this algorithm is certainly
+ * quick, but it is still not useful for large input,
+ * because union() needs to scan through the whole id[]
+ * array for each input pair.
+ *
+ * The time complexity is O(N ^ 2)
  */
 
 public class QuickFindUF {
