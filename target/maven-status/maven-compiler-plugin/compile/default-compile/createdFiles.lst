@@ -1,4 +1,5 @@
 cse/buffalo/edu/algorithms/stackandqueue/WeightedQuickUnionUF.class
 cse/buffalo/edu/algorithms/stackandqueue/QuickUnionUF.class
 cse/buffalo/edu/algorithms/stackandqueue/QuickFindUF.class
+cse/buffalo/edu/algorithms/stackandqueue/WeightedQuickUnionPathCompressionUF.class
 cse/buffalo/edu/algorithms/stackandqueue/Evaluate.class
