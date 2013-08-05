@@ -3,6 +3,10 @@ package cse.buffalo.edu.algorithms.sort;
 import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 
+/**
+ * Top-down merge sort without any improvement.
+ *
+ */
 public class Merge {
 
   // Stably merge a[lo .. mid] with a[mid+1 .. hi] using aux[lo .. hi]
@@ -20,7 +24,10 @@ public class Merge {
     for (int k = lo; k <= hi; k++) {
       if      (i > mid)          a[k] = aux[j++];
       else if (j > hi)           a[k] = aux[i++];
-      else if (less(a[i], a[j])) a[k] = aux[i++];
+      // Pay attention to the next line:
+      // We need to merge back to a[]
+      // So what we compare is aux[], not a[]
+      else if (less(aux[i], aux[j])) a[k] = aux[i++];
       else                       a[k] = aux[j++];
     }
   }
