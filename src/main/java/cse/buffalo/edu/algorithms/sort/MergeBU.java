@@ -4,7 +4,8 @@ import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 
 /**
- * Top-down merge sort without any improvement.
+ * Bottom-up merge sort.
+ * Avoid recursion.
  *
  */
 public class MergeBU {
