@@ -20,6 +20,7 @@ cse/buffalo/edu/algorithms/datastructure/stack/Stack$Node.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/WeightedQuickUnionUF.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack$ReverseArrayIterator.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/WeightedQuickUnionPathCompressionUF.class
+cse/buffalo/edu/algorithms/sort/Quick3Way.class
 cse/buffalo/edu/algorithms/sort/InsertionWithSentinel.class
 cse/buffalo/edu/algorithms/sort/Shell.class
 cse/buffalo/edu/algorithms/datastructure/LinkedListReverse.class
