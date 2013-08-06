@@ -7,6 +7,8 @@ import cse.buffalo.edu.algorithms.stdlib.Stopwatch;
 import cse.buffalo.edu.algorithms.sort.Insertion;
 import cse.buffalo.edu.algorithms.sort.Selection;
 import cse.buffalo.edu.algorithms.sort.InsertionWithSentinel;
+import cse.buffalo.edu.algorithms.sort.Merge;
+import cse.buffalo.edu.algorithms.sort.MergeWithImprovements;
 
 public class SortCompare {
 
@@ -15,7 +17,8 @@ public class SortCompare {
     if (alg.equals("Insertion")) Insertion.sort(a);
     if (alg.equals("Selection")) Selection.sort(a);
     if (alg.equals("Shell")) Shell.sort(a);
-    //if (alg.equals("Merge")) Merge.sort(a);
+    if (alg.equals("Merge")) Merge.sort(a);
+    if (alg.equals("MergeWithImprovements")) MergeWithImprovements.sort(a);
     //if (alg.equals("Quick")) Quick.sort(a);
     //if (alg.equals("Heap")) Heap.sort(a);
     if (alg.equals("InsertionWithSentinel")) InsertionWithSentinel.sort(a);

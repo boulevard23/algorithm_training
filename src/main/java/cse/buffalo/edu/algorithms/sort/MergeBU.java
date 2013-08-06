@@ -7,7 +7,7 @@ import cse.buffalo.edu.algorithms.stdlib.StdOut;
  * Top-down merge sort without any improvement.
  *
  */
-public class Merge {
+public class MergeBU {
 
   // Stably merge a[lo .. mid] with a[mid+1 .. hi] using aux[lo .. hi]
   // a[] and aux[] remains the same size of the original array. What changes is just
@@ -46,8 +46,16 @@ public class Merge {
   }
 
   public static void sort(Comparable[] a) {
-    Comparable[] aux = new Comparable[a.length];
-    sort(a, aux, 0, a.length - 1);
+    int N = a.length;
+    Comparable[] aux = new Comparable[N];
+    for (int n = 1; n < N; n = n + n) {
+      for (int i = 0; i < N - n; i += n + n) {
+        int lo = i;
+        int mid = i + n - 1;
+        int hi = Math.min(i + n + n - 1, N - 1);
+        merge(a, aux, lo, mid, hi);
+      }
+    }
   }
 
   private static boolean less(Comparable v, Comparable w) {
@@ -68,7 +76,7 @@ public class Merge {
 
   public static void main(String[] args) {
     String[] a = StdIn.readStrings();
-    Merge.sort(a);
+    MergeBU.sort(a);
     show(a);
   }
 }

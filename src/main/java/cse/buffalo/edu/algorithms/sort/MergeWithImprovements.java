@@ -33,14 +33,14 @@ public class MergeWithImprovements {
     // Merge back to a[]
     int i = lo, j = mid + 1;
     for (int k = lo; k <= hi; k++) {
-      if      (i > mid)          a[k] = aux[j++];
-      else if (j > hi)           a[k] = aux[i++];
+      if      (i > mid)              a[k] = aux[j++];
+      else if (j > hi)               a[k] = aux[i++];
 
       // Pay attention to the next line:
       // We need to merge back to a[]
       // So what we compare is aux[], not a[]
       else if (less(aux[i], aux[j])) a[k] = aux[i++];
-      else                       a[k] = aux[j++];
+      else                           a[k] = aux[j++];
     }
   }
 
@@ -50,7 +50,7 @@ public class MergeWithImprovements {
     // Stop condition for this recursion.
     // This time we add a CUTOFF, when the items in array
     // is less than 7, we will use insertion sort.
-    if (hi <= lo + CUTOFF -1) {
+    if (hi <= lo + CUTOFF - 1) {
       Insertion.sort(a, lo, hi);
       return;
     }
@@ -62,7 +62,7 @@ public class MergeWithImprovements {
     // #2 improvement
     // Before merging, check if the biggest item in the
     // first half <= smallest item in the second half.
-    if (!less(a[mid+1], a[mid])) return;
+    //if (!less(a[mid+1], a[mid])) return;
     merge(a, aux, lo, mid, hi);
   }
 
