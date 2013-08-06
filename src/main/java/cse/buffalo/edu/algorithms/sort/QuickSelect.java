@@ -3,30 +3,21 @@ package cse.buffalo.edu.algorithms.sort;
 import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 import cse.buffalo.edu.algorithms.stdlib.StdRandom;
-import cse.buffalo.edu.algorithms.sort.Insertion;
 
-public class Quick {
+public class QuickSelect {
 
-  private static final int CUTOFF = 10;
-
-  private static void sort(Comparable[] a, int lo, int hi) {
-    if (hi - lo <= CUTOFF) {
-      Insertion.sort(a, lo, hi);
-      return;
-    }
-
-    // mid here is the right position for a[lo]
-    int mid = partition(a, lo, hi);
-
-    // The following 2 sort should not include a[mid]
-    // because it is in the right position.
-    sort(a, lo, mid - 1);
-    sort(a, mid + 1, hi);
-  }
-
-  public static void sort(Comparable[] a) {
+  public static Comparable select(Comparable[] a, int k) {
     StdRandom.shuffle(a);
-    sort(a, 0, a.length - 1);
+    int lo = 0, hi = a.length - 1;
+
+    while (hi > lo) {
+      int j = partition(a, lo, hi);
+
+      if              (j < k) lo = j + 1;
+      else if (j > k) hi = j - 1;
+      else            return a[k];
+    }
+    return a[k];
   }
 
   private static int partition(Comparable[] a, int lo, int hi) {
@@ -70,8 +61,9 @@ public class Quick {
 
   public static void main(String[] args) {
     String[] a = StdIn.readStrings();
-    Quick.sort(a);
+    Comparable b = QuickSelect.select(a, 2);
     show(a);
+    StdOut.println("#2: " + b);
   }
 }
 
