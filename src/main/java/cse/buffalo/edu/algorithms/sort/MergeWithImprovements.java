@@ -62,7 +62,7 @@ public class MergeWithImprovements {
     // #2 improvement
     // Before merging, check if the biggest item in the
     // first half <= smallest item in the second half.
-    //if (!less(a[mid+1], a[mid])) return;
+    if (!less(a[mid+1], a[mid])) return;
     merge(a, aux, lo, mid, hi);
   }
 
