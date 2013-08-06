@@ -9,6 +9,7 @@ cse/buffalo/edu/algorithms/datastructure/queue/Queue$1.class
 cse/buffalo/edu/algorithms/stdlib/Stopwatch.class
 cse/buffalo/edu/algorithms/datastructure/queue/Queue$LinkedListQueueIterator.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag$LinkedListBagIterator.class
+cse/buffalo/edu/algorithms/sort/MergeWithImprovements.class
 cse/buffalo/edu/algorithms/sort/Bubble.class
 cse/buffalo/edu/algorithms/datastructure/queue/Queue$Node.class
 cse/buffalo/edu/algorithms/sort/SortCompare.class
