@@ -35,7 +35,7 @@ public class Quick {
       }
 
       while (less(a[lo], a[--j])) {
-        if (j == lo) break;
+        if (j == lo) break; // This line is redundant, because when j = lo, a[lo] = a[j]
       }
 
       if (i >= j) break;

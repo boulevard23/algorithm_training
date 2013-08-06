@@ -19,7 +19,7 @@ public class SortCompare {
     if (alg.equals("Shell")) Shell.sort(a);
     if (alg.equals("Merge")) Merge.sort(a);
     if (alg.equals("MergeWithImprovements")) MergeWithImprovements.sort(a);
-    //if (alg.equals("Quick")) Quick.sort(a);
+    if (alg.equals("Quick")) Quick.sort(a);
     //if (alg.equals("Heap")) Heap.sort(a);
     if (alg.equals("InsertionWithSentinel")) InsertionWithSentinel.sort(a);
     return timer.elapsedTime();
