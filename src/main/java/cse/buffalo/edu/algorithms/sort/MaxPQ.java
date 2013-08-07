@@ -60,7 +60,7 @@ public class MaxPQ<Key extends Comparable<Key>> {
       int bigChild = 2 * k;
 
       // Pick the bigger one of two children.
-      if (less(bigChild, bigChild + 1)) bigChild++;
+      if (bigChild < N && less(bigChild, bigChild + 1)) bigChild++;
 
       // Do nothing if the bigger child is smaller than the parent.
       if (!less(k, bigChild)) break;
@@ -87,6 +87,13 @@ public class MaxPQ<Key extends Comparable<Key>> {
     pq[j] = tmp;
   }
 
+  public void show() {
+    StdOut.println("**** Show ****");
+    for (int i = 0; i < pq.length; i++) {
+      StdOut.print(pq[i] + " ");
+    }
+  }
+
   public static void main(String[] args) {
     MaxPQ<String> pq = new MaxPQ<String>(20);
     while (!StdIn.isEmpty()) {
@@ -95,5 +102,6 @@ public class MaxPQ<Key extends Comparable<Key>> {
       else if (!pq.isEmpty()) StdOut.print(pq.delMax() + " ");
     }
     StdOut.println("(" + pq.size() + " left on pq)");
+    //pq.show();
   }
 }
