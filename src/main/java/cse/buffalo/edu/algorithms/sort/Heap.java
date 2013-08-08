@@ -10,7 +10,7 @@ import cse.buffalo.edu.algorithms.stdlib.StdRandom;
  */
 public class Heap {
 
-  private static void sort(Comparable[] a) {
+  public static void sort(Comparable[] a) {
     int N = a.length;
     //StdOut.println("N = " + N);
 
