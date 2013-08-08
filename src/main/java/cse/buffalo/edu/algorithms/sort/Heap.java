@@ -34,8 +34,8 @@ public class Heap {
     while (2 * k <= N) {
       int bigChild = 2 * k;
 
-      // Pay attention: I spent a lot of time debug this.
-      // bigChild < N is necessray.
+      // Pay attention: I spent a lot of time debugging this.
+      // bigChild < N is necessary.
       // Because bigChild = 2 * k at first, which means it is always
       // the left child at first.
       // If bigChild == N, it means the right child is overflow,
