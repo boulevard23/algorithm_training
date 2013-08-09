@@ -13,9 +13,11 @@ public class BinarySearch {
   private static int search(Comparable[] a, Comparable target, int lo, int hi) {
     while (lo <= hi) {
       int mid = lo + (hi - lo) / 2;
-      if (target.compareTo(a[mid]) < 0)      hi = mid;
-      else if (target.compareTo(a[mid]) > 0) lo = mid + 1;
-      else                                   return mid;
+
+      int cmp = target.compareTo(a[mid]);
+      if (cmp < 0)      hi = mid;
+      else if (cmp > 0) lo = mid + 1;
+      else              return mid;
     }
 
     return -1;

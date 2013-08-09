@@ -6,7 +6,9 @@ cse/buffalo/edu/algorithms/datastructure/stack/Stack.class
 cse/buffalo/edu/algorithms/stdlib/StdArrayIO.class
 cse/buffalo/edu/algorithms/datastructure/stack/Stack$1.class
 cse/buffalo/edu/algorithms/datastructure/stack/FixedCapacityStackOfStrings.class
+cse/buffalo/edu/algorithms/search/BST.class
 cse/buffalo/edu/algorithms/stdlib/StdOut.class
+cse/buffalo/edu/algorithms/search/RedBlackBST$Node.class
 cse/buffalo/edu/algorithms/sort/Quick.class
 cse/buffalo/edu/algorithms/stdlib/StdRandom.class
 cse/buffalo/edu/algorithms/sort/QuickSelect.class
@@ -29,6 +31,7 @@ cse/buffalo/edu/algorithms/datastructure/unionfind/WeightedQuickUnionPathCompres
 cse/buffalo/edu/algorithms/sort/Quick3Way.class
 cse/buffalo/edu/algorithms/sort/InsertionWithSentinel.class
 cse/buffalo/edu/algorithms/sort/Shell.class
+cse/buffalo/edu/algorithms/search/BST$Node.class
 cse/buffalo/edu/algorithms/datastructure/LinkedListReverse.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag$1.class
@@ -49,4 +52,5 @@ cse/buffalo/edu/algorithms/datastructure/Evaluate.class
 cse/buffalo/edu/algorithms/stdlib/StdIn.class
 cse/buffalo/edu/algorithms/App.class
 cse/buffalo/edu/algorithms/sort/Insertion.class
+cse/buffalo/edu/algorithms/search/RedBlackBST.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack.class

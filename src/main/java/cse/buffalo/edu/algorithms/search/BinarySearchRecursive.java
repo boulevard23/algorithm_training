@@ -12,9 +12,11 @@ public class BinarySearchRecursive {
 
     //StdOut.println("low: " + lo + " high: " + hi);
     int mid = lo + (hi - lo) / 2;
-    if (target.compareTo(a[mid]) < 0)      return search(a, target, lo, mid);
-    else if (target.compareTo(a[mid]) > 0) return search(a, target, mid + 1, hi);
-    else                                   return mid;
+
+    int cmp = target.compareTo(a[mid]);
+    if (cmp < 0)      return search(a, target, lo, mid);
+    else if (cmp > 0) return search(a, target, mid + 1, hi);
+    else              return mid;
   }
 
   public static int search(Comparable[] a, Comparable target) {
