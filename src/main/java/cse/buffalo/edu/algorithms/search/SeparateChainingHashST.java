@@ -3,6 +3,7 @@ package cse.buffalo.edu.algorithms.search;
 import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 import cse.buffalo.edu.algorithms.datastructure.queue.Queue;
+import cse.buffalo.edu.algorithms.search.SequentialSearchST;
 
 public class SeparateChainingHashST<Key, Value> {
 
@@ -10,27 +11,30 @@ public class SeparateChainingHashST<Key, Value> {
 
   private int N;                   // Number of key-value pairs
   private int M;                   // Number of chains
-  private Node[] st; // Array of linked-list symbol tables
-
-  private static class Node {
-    private Object key;
-    private Object val;
-    private Node next;
-
-    public Node(Object key, Object val, Node next) {
-      this.key  = key;
-      this.val  = val;
-      this.next = next;
-    }
-  }
+  private SequentialSearchST<Key, Value>[] st; // Array of linked-list symbol tables
 
   public SeparateChainingHashST() {
     this(INIT_CAPACITY);
   }
 
   public SeparateChainingHashST(int M) {
-    st = new Node[M];
+    st = (SequentialSearchST<Key, Value>[]) new SequentialSearchST[M];
+    for (int i = 0; i < M; i++) {
+      st[i] = new SequentialSearchST<Key, Value>();
+    }
     this.M = M;
+  }
+
+  private void resize(int size) {
+    SeparateChainingHashST<Key, Value> tmp = new SeparateChainingHashST<Key, Value>(size);
+    for (int i = 0; i < M; i++) {
+      for (Key key : st[i].keys()) {
+        tmp.put(key, st[i].get(key));
+      }
+    }
+    this.M = tmp.M;
+    this.N = tmp.N;
+    this.st = tmp.st;
   }
 
   public int size() {
@@ -50,31 +54,37 @@ public class SeparateChainingHashST<Key, Value> {
   }
 
   public void put(Key key, Value val) {
-    int i = hash(key);
-    for (Node x = st[i]; x != null; x = x.next) {
-      if (key.equals(x.key)) {
-        x.val = val;
-        return;
-      }
+    if (val == null) {
+      delete(key);
+      return;
     }
-    st[i] = new Node(key, val, st[i]);
+
+    // Double table size if average length of list >= 10
+    if (N >= 10 * M) resize(2 * M);
+
+    int i = hash(key);
+    if (!st[i].contains(key)) N++;
+    st[i].put(key, val);
   }
 
   public Value get(Key key) {
     int i = hash(key);
-    for (Node x = st[i]; x != null; x = x.next) {
-      if (key.equals(x.key)) {
-        return (Value) x.val;
-      }
-    }
-    return null;
+    return st[i].get(key);
+  }
+
+  public void delete(Key key) {
+    int i = hash(key);
+    if (st[i].contains(key)) N--;
+    st[i].delete(key);
+
+    if (M > INIT_CAPACITY && N <= 2*M) resize(M/2);
   }
 
   public Iterable<Key> keys() {
     Queue<Key> queue = new Queue<Key>();
     for (int i = 0; i < M; i++) {
-      if (st[i] != null) {
-        queue.enqueue((Key) st[i].key);
+      for (Key key : st[i].keys()) {
+        queue.enqueue(key);
       }
     }
     return queue;
