@@ -173,6 +173,7 @@ public class BST<Key extends Comparable<Key>, Value> {
   }
 
   private int rank(Node x, Key key) {
+    // Stop condition for the recursion.
     if (x == null) return 0;
     int cmp = key.compareTo(x.key);
 
@@ -223,7 +224,7 @@ public class BST<Key extends Comparable<Key>, Value> {
     return q;
   }
 
-  // Ascending order.
+  // Ascending order. A concise and important part.
   private void inorder(Node x, Queue<Key> q) {
     if (x == null) return;
     inorder(x.left, q);
