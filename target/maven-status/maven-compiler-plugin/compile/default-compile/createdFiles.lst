@@ -1,6 +1,7 @@
 cse/buffalo/edu/algorithms/datastructure/queue/ResizingArrayQueue.class
 cse/buffalo/edu/algorithms/datastructure/stack/FixedCapacityStack.class
 cse/buffalo/edu/algorithms/stdlib/StdDraw.class
+cse/buffalo/edu/algorithms/search/LinearProbingHashST.class
 cse/buffalo/edu/algorithms/datastructure/queue/Queue.class
 cse/buffalo/edu/algorithms/datastructure/stack/Stack.class
 cse/buffalo/edu/algorithms/stdlib/StdArrayIO.class
@@ -41,6 +42,7 @@ cse/buffalo/edu/algorithms/stdlib/StdAudio.class
 cse/buffalo/edu/algorithms/sort/MergeBU.class
 cse/buffalo/edu/algorithms/sort/Merge.class
 cse/buffalo/edu/algorithms/sort/Heap.class
+cse/buffalo/edu/algorithms/stdlib/In.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack$1.class
 cse/buffalo/edu/algorithms/sort/Selection.class
 cse/buffalo/edu/algorithms/search/SequentialSearchST$Node.class
@@ -49,6 +51,7 @@ cse/buffalo/edu/algorithms/datastructure/bag/Bag$Node.class
 cse/buffalo/edu/algorithms/search/SequentialSearchST.class
 cse/buffalo/edu/algorithms/datastructure/stack/Stack$LinkedListStackIterator.class
 cse/buffalo/edu/algorithms/search/BinarySearchRecursive.class
+cse/buffalo/edu/algorithms/graph/Graph.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/QuickUnionUF.class
 cse/buffalo/edu/algorithms/datastructure/LinkedListReverse$Node.class
 cse/buffalo/edu/algorithms/datastructure/Evaluate.class

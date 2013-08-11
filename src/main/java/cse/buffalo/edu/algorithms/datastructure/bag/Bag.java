@@ -44,7 +44,7 @@ public class Bag<Item> implements Iterable<Item> {
     Node current = first;
 
     public boolean hasNext() {
-      return first == null;
+      return current != null;
     }
 
     public Item next() {
