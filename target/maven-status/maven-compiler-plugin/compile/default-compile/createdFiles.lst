@@ -48,6 +48,7 @@ cse/buffalo/edu/algorithms/sort/Heap.class
 cse/buffalo/edu/algorithms/stdlib/In.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack$1.class
 cse/buffalo/edu/algorithms/sort/Selection.class
+cse/buffalo/edu/algorithms/graph/Digraph.class
 cse/buffalo/edu/algorithms/search/SequentialSearchST$Node.class
 cse/buffalo/edu/algorithms/stdlib/StdStats.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag$Node.class

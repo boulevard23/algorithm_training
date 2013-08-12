@@ -4,6 +4,7 @@ import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 import cse.buffalo.edu.algorithms.stdlib.In;
 import cse.buffalo.edu.algorithms.datastructure.queue.Queue;
+import cse.buffalo.edu.algorithms.datastructure.queue.Queue;
 
 public class ConnectedComponents {
 
