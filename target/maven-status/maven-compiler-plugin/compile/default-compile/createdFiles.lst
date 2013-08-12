@@ -34,6 +34,7 @@ cse/buffalo/edu/algorithms/search/BinarySearch.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/WeightedQuickUnionPathCompressionUF.class
 cse/buffalo/edu/algorithms/sort/Quick3Way.class
 cse/buffalo/edu/algorithms/search/SeparateChainingHashST.class
+cse/buffalo/edu/algorithms/graph/DirectedCycle.class
 cse/buffalo/edu/algorithms/sort/InsertionWithSentinel.class
 cse/buffalo/edu/algorithms/sort/Shell.class
 cse/buffalo/edu/algorithms/search/BST$Node.class
