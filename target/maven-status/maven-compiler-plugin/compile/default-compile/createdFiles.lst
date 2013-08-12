@@ -36,6 +36,7 @@ cse/buffalo/edu/algorithms/search/SeparateChainingHashST.class
 cse/buffalo/edu/algorithms/sort/InsertionWithSentinel.class
 cse/buffalo/edu/algorithms/sort/Shell.class
 cse/buffalo/edu/algorithms/search/BST$Node.class
+cse/buffalo/edu/algorithms/graph/ConnectedComponents.class
 cse/buffalo/edu/algorithms/datastructure/LinkedListReverse.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag$1.class
