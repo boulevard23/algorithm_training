@@ -11,7 +11,9 @@ cse/buffalo/edu/algorithms/search/BST.class
 cse/buffalo/edu/algorithms/datastructure/stack/FixedCapacityStackOfStrings.class
 cse/buffalo/edu/algorithms/stdlib/StdOut.class
 cse/buffalo/edu/algorithms/search/RedBlackBST$Node.class
+cse/buffalo/edu/algorithms/graph/Edge.class
 cse/buffalo/edu/algorithms/sort/Quick.class
+cse/buffalo/edu/algorithms/graph/DepthFirstOrder.class
 cse/buffalo/edu/algorithms/stdlib/StdRandom.class
 cse/buffalo/edu/algorithms/sort/QuickSelect.class
 cse/buffalo/edu/algorithms/datastructure/queue/ResizingArrayQueue$ArrayIterator.class
@@ -50,6 +52,7 @@ cse/buffalo/edu/algorithms/sort/Heap.class
 cse/buffalo/edu/algorithms/stdlib/In.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack$1.class
 cse/buffalo/edu/algorithms/sort/Selection.class
+cse/buffalo/edu/algorithms/graph/StrongComponents.class
 cse/buffalo/edu/algorithms/graph/Digraph.class
 cse/buffalo/edu/algorithms/search/SequentialSearchST$Node.class
 cse/buffalo/edu/algorithms/stdlib/StdStats.class
