@@ -52,15 +52,15 @@ public class MinPQ<Key> implements Iterable<Key> {
   }
 
   public void insert(Key v) {
-    if (N >= pq.length - 1) resize(2 * pq.length);
+    if (N == pq.length - 1) resize(2 * pq.length);
     pq[++N] = v;
     swim(N);
   }
 
   public Key delMin() {
     if (isEmpty()) throw new NoSuchElementException("Priority queue underflow");
-    Key min = pq[1];
-    exch(1, N--);
+    exch(1, N);
+    Key min = pq[N--];
     sink(1);
     pq[N+1] = null; // To avoid loitering
 
@@ -84,7 +84,7 @@ public class MinPQ<Key> implements Iterable<Key> {
       int smallChild = 2 * k;
 
       // Pick the bigger one of two children.
-      if (smallChild < N && greater(smallChild, smallChild)) smallChild++;
+      if (smallChild < N && greater(smallChild, smallChild + 1)) smallChild++;
 
       // Do nothing if the bigger child is smaller than the parent.
       if (!greater(k, smallChild)) break;

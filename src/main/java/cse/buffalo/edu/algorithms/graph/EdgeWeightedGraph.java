@@ -90,7 +90,7 @@ public class EdgeWeightedGraph {
     for (int v = 0; v < V; v++) {
       int selfLoops = 0;
       for (Edge e : adj(v)) {
-        if (e.other(v) > V) {
+        if (e.other(v) > v) {
           list.add(e);
         }
 

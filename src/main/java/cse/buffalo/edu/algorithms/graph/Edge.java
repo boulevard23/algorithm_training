@@ -3,7 +3,7 @@ package cse.buffalo.edu.algorithms.graph;
 import cse.buffalo.edu.algorithms.stdlib.StdIn;
 import cse.buffalo.edu.algorithms.stdlib.StdOut;
 
-public class Edge {
+public class Edge implements Comparable<Edge> {
 
   private final int v;
   private final int w;
