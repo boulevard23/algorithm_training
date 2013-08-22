@@ -63,6 +63,7 @@ cse/buffalo/edu/algorithms/graph/StrongComponents.class
 cse/buffalo/edu/algorithms/graph/Digraph.class
 cse/buffalo/edu/algorithms/search/SequentialSearchST$Node.class
 cse/buffalo/edu/algorithms/stdlib/StdStats.class
+cse/buffalo/edu/algorithms/sort/IndexMinPQ$HeapIterator.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag$Node.class
 cse/buffalo/edu/algorithms/graph/DepthFirstSearch.class
 cse/buffalo/edu/algorithms/sort/MinPQ.class
@@ -77,5 +78,6 @@ cse/buffalo/edu/algorithms/datastructure/Evaluate.class
 cse/buffalo/edu/algorithms/stdlib/StdIn.class
 cse/buffalo/edu/algorithms/App.class
 cse/buffalo/edu/algorithms/sort/Insertion.class
+cse/buffalo/edu/algorithms/sort/IndexMinPQ.class
 cse/buffalo/edu/algorithms/search/RedBlackBST.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack.class
