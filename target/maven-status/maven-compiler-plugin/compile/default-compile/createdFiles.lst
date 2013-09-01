@@ -31,10 +31,12 @@ cse/buffalo/edu/algorithms/sort/SortCompare.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/QuickFindUF.class
 cse/buffalo/edu/algorithms/datastructure/stack/Stack$Node.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/WeightedQuickUnionUF.class
+cse/buffalo/edu/algorithms/string/MSD.class
 cse/buffalo/edu/algorithms/datastructure/stack/ResizingArrayStack$ReverseArrayIterator.class
 cse/buffalo/edu/algorithms/sort/MaxPQ.class
 cse/buffalo/edu/algorithms/graph/Bipartite.class
 cse/buffalo/edu/algorithms/search/BinarySearch.class
+cse/buffalo/edu/algorithms/string/Quick3string.class
 cse/buffalo/edu/algorithms/sort/MaxPQ$HeapIterator.class
 cse/buffalo/edu/algorithms/datastructure/unionfind/WeightedQuickUnionPathCompressionUF.class
 cse/buffalo/edu/algorithms/sort/Quick3Way.class
