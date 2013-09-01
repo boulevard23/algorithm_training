@@ -86,6 +86,14 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
   public void changeKey(int i, Key key) {
     if (i < 0 || i >= NMAX) throw new IndexOutOfBoundsException();
     if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+    keys[i] = key;
+    swim(qp[i]);
+    sink(qp[i]);
+  }
+
+  public void decreaseKey(int i, Key key) {
+    if (i < 0 || i >= NMAX) throw new IndexOutOfBoundsException();
+    if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
     if (keys[i].compareTo(key) <= 0) throw new IllegalArgumentException("Calling decreaseKey() with given argument would not strictly decrease the key");
     keys[i] = key;
     swim(qp[i]);

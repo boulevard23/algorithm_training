@@ -46,6 +46,7 @@ cse/buffalo/edu/algorithms/sort/Shell.class
 cse/buffalo/edu/algorithms/search/BST$Node.class
 cse/buffalo/edu/algorithms/graph/ConnectedComponents.class
 cse/buffalo/edu/algorithms/datastructure/LinkedListReverse.class
+cse/buffalo/edu/algorithms/string/LSD.class
 cse/buffalo/edu/algorithms/sort/MinPQ$HeapIterator.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag.class
 cse/buffalo/edu/algorithms/datastructure/bag/Bag$1.class
@@ -68,6 +69,7 @@ cse/buffalo/edu/algorithms/datastructure/bag/Bag$Node.class
 cse/buffalo/edu/algorithms/graph/DepthFirstSearch.class
 cse/buffalo/edu/algorithms/sort/MinPQ.class
 cse/buffalo/edu/algorithms/search/SequentialSearchST.class
+cse/buffalo/edu/algorithms/graph/DijkstraSP.class
 cse/buffalo/edu/algorithms/graph/DepthFirstPaths.class
 cse/buffalo/edu/algorithms/datastructure/stack/Stack$LinkedListStackIterator.class
 cse/buffalo/edu/algorithms/search/BinarySearchRecursive.class
