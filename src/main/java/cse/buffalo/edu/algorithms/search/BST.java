@@ -92,8 +92,8 @@ public class BST<Key extends Comparable<Key>, Value> {
     if (x == null) return null;
     int cmp = key.compareTo(x.key);
     // Search for the key.
-    if (cmp < 0)      delete(x.left, key);
-    else if (cmp > 0) delete(x.right, key);
+    if (cmp < 0)      x.left = delete(x.left, key);
+    else if (cmp > 0) x.right = delete(x.right, key);
     else {
       // Case 1: no right child.
       // You can do the same thing when there is no left child
