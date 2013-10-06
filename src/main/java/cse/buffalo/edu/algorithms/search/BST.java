@@ -100,6 +100,7 @@ public class BST<Key extends Comparable<Key>, Value> {
       // but because no left child can be handle by the case 2,
       // you don't need to do it here
       if (x.right == null) return x.left;
+      if (x.right == null) return x.right;
 
       Node t = x;
       // Replace this node with the min node of the right subtree.
