@@ -31,7 +31,7 @@ public class DirectedCycle {
       // At first I thought if don't write this line, it will be a dead loop.
       // That's totally wrong.
       // The program doesn't end as soon as it encounter this.
-      // It is just a shortcut so that the rest of the recursion end without ge further.
+      // It is just a shortcut so that the rest of the recursion end without go further.
       if (cycle != null) {
         //StdOut.println("Detect cycle");
         //for (int i : cycle) {
